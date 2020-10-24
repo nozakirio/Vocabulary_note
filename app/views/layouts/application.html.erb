@@ -14,20 +14,23 @@
       <ul>
         <% if user_signed_in? %>
           <li class="">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            <%= link_to "Home", "#" %>
           </li>
           <li class="">
-            <%= link_to "投稿フォーム", "#" %>
+            <%= link_to "Users", "#" %>
           </li>
           <li class="">
-            <%= link_to "マイページ", "#" %>
+            <%= link_to "Books", books_path %>
+          </li>
+          <li class="">
+            <%= link_to "logout", destroy_user_session_path, method: :delete %>
           </li>
         <% else %>
           <li class="">
-            <%= link_to "Home", new_user_registration_path %>
+            <%= link_to "Home", root_path %>
           </li>
           <li class="">
-            <%= link_to "About", new_user_session_path %>
+            <%= link_to "About", home_about_path %>
           </li>
           <li class="">
             <%= link_to "sign up", new_user_registration_path %>
