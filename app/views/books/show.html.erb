@@ -5,6 +5,7 @@
         <td></td>
         <td><%= @book.title %></td>
         <td><%= @book.body %></td>
+        <td><%= @book.created_at.strftime('%Y/%m/%d') %></td>
       </tr>
     </tbody>
   </table>

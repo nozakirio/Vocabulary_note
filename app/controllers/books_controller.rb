@@ -1,14 +1,19 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    @books = Book.page(params[:page]).reverse_order
     @book = Book.new
   end
 
   def create
     @book = Book.new(book_params)
     @book.user_id = current_user.id
-    @book.save
-    redirect_to book_path(@book)
+    if @book.save
+      flash[:notice] = "投稿が完了しました"
+      redirect_to book_path(@book)
+    else
+      @books = Book.page(params[:page]).reverse_order
+      render :index
+    end
   end
   
   def show
