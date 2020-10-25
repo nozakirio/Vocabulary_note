@@ -14,10 +14,10 @@
       <ul>
         <% if user_signed_in? %>
           <li class="">
-            <%= link_to "Home", "#" %>
+            <%= link_to "Home", user_path(current_user.id) %>
           </li>
           <li class="">
-            <%= link_to "Users", "#" %>
+            <%= link_to "Users", users_path %>
           </li>
           <li class="">
             <%= link_to "Books", books_path %>
