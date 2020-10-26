@@ -14,7 +14,11 @@
   </table>
 
 <% if user == current_user %>
-  <%= link_to "編集", edit_user_path(current_user) %>
+  <%= link_to edit_user_path(current_user) do %>
+    <i class="glyphicon glyphicon-wrench btn btn-default col-xs-12" ></i>
+  <% end %>
 <% else %>
-  <%= link_to "編集", user_path(current_user) %>
+  <%= link_to user_path(current_user) do %>
+    <i class="glyphicon glyphicon-wrench btn btn-default col-xs-12" ></i>
+  <% end %>
 <% end %>

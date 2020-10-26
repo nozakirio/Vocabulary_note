@@ -19,7 +19,9 @@
           </td>
           <td>
             <% if @user == current_user %>
-              <%= link_to "Destroy", book_path(@book), method: :delete, data: { confirm: '削除しますか？' } %>
+              <%= link_to book_path(@book), method: :delete, data: { confirm: '削除しますか？' } do %>
+                <i class="glyphicon glyphicon-trash" ></i>
+              <% end %>
             <% end %>
           </td>
         </tr>
