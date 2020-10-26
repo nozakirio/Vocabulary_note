@@ -1,0 +1,110 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+  background-color:#fff;
+  color:#333;
+  font-family:verdana, arial, helvetica, sans-serif;
+  font-size:13px;
+  line-height:18px;
+  margin:33px;
+}
+p,ol,ul,td{
+  font-family:verdana, arial, helvetica, sans-serif;
+  font-size:13px;
+  line-height:18px;
+}
+
+pre{
+  background-color:#eee;
+  padding:10px;
+  font-size:11px;
+}
+a{
+  color:#000;
+}
+a:visited{
+  color:#666;
+}
+a:hover{
+  color:#fff;
+  background-color:#000;
+}
+
+th{
+  padding-bottom:5px;
+}
+
+td{
+  padding-bottom:7px;
+  padding-left:5px;
+  padding-right:5px;
+}
+
+div.field,div.actions{
+  margin-bottom:10px;
+}
+
+#notice{
+  color:green;
+}
+
+#error_explanation{
+  color:red;
+}
+  
+label{
+  display:block;
+}
+ 
+li{
+  list-style: none;
+  float: left;
+  display:block;
+  padding:15px;
+}
+
+li{
+  line-height: 20px;
+}
+
+header .navbar-left span {
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+header {
+  color: white;
+}
+
+.body {
+  margin-top: 51px;
+}
+
+.col-xs-offset-9 {
+  margin-left: 75%;
+}
+
+.col-xs-3 {
+  width: 25%;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+
+.book_title,.book_body{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+div {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}

@@ -1,23 +1,28 @@
-<%= render 'users/list', user: @user %>
-<%= render 'books/list', book: @book %>
-<h2>Books</h2>
-  <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>Title</th>
-          <th>Opinion</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @books.each do |book| %>
-          <tr>
-            <td><%= attachment_image_tag book.user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg", size:'40x40' %></td>
-            <td><%= link_to book.title, book_path(book) %></td>
-            <td><%= book.body %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+<div class="col-xs-3">
+  <%= render 'users/list', user: @user %>
+  <%= render 'books/list', book: @book %>
+</div>
 
-<%= paginate @books %>
+<div class="col-xs-9">
+  <h2>Books</h2>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Title</th>
+            <th>Opinion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @books.each do |book| %>
+            <tr>
+              <td><%= attachment_image_tag book.user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg", size:'40x40' %></td>
+              <td><%= link_to book.title, book_path(book) %></td>
+              <td><%= book.body %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+  
+  <%= paginate @books %>
+</div>
