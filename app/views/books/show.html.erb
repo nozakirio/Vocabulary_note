@@ -1,19 +1,20 @@
-<p id="notice"><%= notice %></p>
+<%= render 'users/list', user: @user %>
+<%= render 'books/list', book: @book_for_new %>
 <h2>Book detail</h2>
   <table>
     <tbody>
       <tr>
-        <td></td>
+        <td><%= attachment_image_tag @user, :profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg", size:'40x40'  %></td>
         <td><%= @book.title %></td>
         <td><%= @book.body %></td>
         <td><%= @book.created_at.strftime('%Y/%m/%d') %></td>
         <td>
-          <% if @book.user == current_user %>
+          <% if @user == current_user %>
             <%= link_to "Edit", edit_book_path(@book) %>
           <% end %>
         </td>
         <td>
-          <% if @book.user == current_user %>
+          <% if @user == current_user %>
             <%= link_to "Destroy", book_path(@book), method: :delete, data: { confirm: '削除しますか？' } %>
           <% end %>
         </td>
